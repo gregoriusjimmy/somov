@@ -10,8 +10,14 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: '30%',
+      width: '80%',
       margin: 'auto',
+      [theme.breakpoints.up('sm')]: {
+        width: '50%',
+      },
+      [theme.breakpoints.up('md')]: {
+        width: '30%',
+      },
     },
     title: {
       color: 'white',
@@ -33,7 +39,7 @@ const SignUpForm: React.FC<SignUpFormProps> = () => {
   const onSubmit = (data: Inputs) => console.log(data)
   return (
     <div className={classes.root}>
-      <Typography className={classes.title} variant='h1'>
+      <Typography className={classes.title} variant='h2'>
         SIGN UP
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>

@@ -1,7 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 // import '@material-ui/lab/themeAugmentation'
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     primary: {
       light: '#df78ef',
@@ -19,12 +19,12 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: ['Montserrat', 'Open Sans'],
     h1: {
-      fontSize: 36,
+      fontSize: '3rem',
       fontFamily: "'Montserrat', 'sans-serif'",
       fontWeight: 600,
     },
     h2: {
-      fontSize: 26,
+      fontSize: '2rem',
       fontFamily: "'Montserrat', 'sans-serif'",
       fontWeight: 600,
     },
@@ -38,5 +38,5 @@ const theme = createMuiTheme({
     },
   },
 })
-
+theme = responsiveFontSizes(theme)
 export default theme
